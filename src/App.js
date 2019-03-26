@@ -25,9 +25,19 @@ export default class App extends Component {
     render() {
         return (
             <div>
-                <Titles/>
-                <Form getWeather={this.getWeather}/>
-                <Weather {...this.state.weather}/>
+                <div className='wrapper'>
+                    <div className='main'>
+                        <div className='row'>
+                            <div className='col-sm-5 title-container'>
+                                <Titles/>
+                            </div>
+                            <div className='col-sm-7 form-container'>
+                                <Form getWeather={this.getWeather}/>
+                                <Weather {...this.state.weather}/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         )
     }
