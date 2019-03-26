@@ -19,7 +19,6 @@ export default class App extends Component {
         const apiCall = await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city},${country}&appid=${API_KEY}&units=metric`);
         const data = await apiCall.json();
         this.setState({weather: data});
-        console.log(this.state.weather);
     };
 
     render() {
